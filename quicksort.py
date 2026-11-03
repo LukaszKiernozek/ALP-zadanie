@@ -33,9 +33,7 @@ def partition(A, p, r):
     A[i], A[r]=A[r], A[i]
     return i
 
-
 czasy = timeit.repeat( lambda: quicksort(A.copy(), 0, len(A) - 1), repeat=5, number=10)
-
 
 
 quicksort(A, 0, len(A) - 1)
