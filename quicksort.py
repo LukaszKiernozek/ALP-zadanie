@@ -4,14 +4,16 @@ import sys
 sys.setrecursionlimit(50000)
 
 #random
-A = [random.randint(0, 10000) for _ in range(10000)]
+#A = [random.randint(0, 1000) for _ in range(1000)]
 
-#posortowana od 0 do 9 
-#A = sorted(list(range(10)) * 100)
+# Reverse sorted
+#A = list(range(999, -1, -1))
 
-#posortowana
-#A = list(range(0, 1000))
+#prawie posortowane
+#A = list(range(900)) + [random.randint(0, 1000) for _ in range(100)]
 
+#wiele powtorzen
+A = [random.randint(0, 9) for _ in range(10000)]
 
 
 def quicksort(A, p, r):
@@ -22,7 +24,7 @@ def quicksort(A, p, r):
         #print(f"Quicksort(A,{p},{q})")
 
 def partition(A, p, r):
-    x = A[r] #element wyznacz podzial
+    x = A[r]
     i = p
     for j in range (p, r):
         if A[j]<=x:
